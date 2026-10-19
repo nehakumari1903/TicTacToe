@@ -1,62 +1,123 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-.heading{
+
+body {
+    background-color: #EEF6DD;
+}
+
+.heading {
     height: 100px;
-    background-color: #F75590;
+    background-color: #4F7F3A;
     color: white;
     text-align: center;
     line-height: 100px;
 }
-.container{
-    height: 80vh;
-    background-color: #B5F8FE;
+
+.container {
+    min-height: 80vh;
     display: flex;
-    justify-content: center;
-    text-align: center;
-    padding-top: 5vmin;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vmin;
+    padding: 4vmin 0;
 }
-.game{
+
+/* ---------- mode buttons ---------- */
+.modes {
+    display: flex;
+    gap: 1.5vmin;
+}
+
+.mode {
+    padding: 1.2vmin 2vmin;
+    font-size: 2.2vmin;
+    background-color: white;
+    color: #243319;
+    border: 2px solid #4F7F3A;
+    border-radius: 2vmin;
+    cursor: pointer;
+}
+
+.mode.active {
+    background-color: #4F7F3A;
+    color: white;
+}
+
+/* ---------- scoreboard ---------- */
+.scoreboard {
+    display: flex;
+    gap: 4vmin;
+    font-size: 3vmin;
+    color: #243319;
+}
+
+/* ---------- board ---------- */
+.game {
     height: 60vh;
     width: 60vh;
     display: flex;
     justify-content: center;
-    text-align: center; 
+    text-align: center;
     flex-wrap: wrap;
     gap: 1.5vmin;
 }
-.box{
+
+.box {
     height: 18vmin;
     width: 18vmin;
-    background-color: #10FFCB;
+    background-color: #B9DB8E;
     border-radius: 2vmin;
     border: none;
     font-size: 8vmin;
-}
-#message_cont{
-   font-size: 5vmin;
-}
-.hide{
-    display: none;
-}
-.newgame{
-    height: 5vmin;
-    font-size: 4vmin;
-    background-color: brown;
-    color: white;
-    margin-top: 3vmin;
-    border-radius: 2vmin;
+    cursor: pointer;
 }
 
-.hii{
+.box:hover {
+    background-color: #CBE8A6;
+}
+
+/* colours of O and X */
+.box.o {
+    color: #2F5D2B;
+}
+
+.box.x {
+    color: #A8203F;
+}
+
+/* winning boxes turn yellow */
+.box.win {
+    background-color: #FFE08A;
+}
+
+/* ---------- message and buttons ---------- */
+#message_cont {
+    font-size: 4vmin;
+    color: #243319;
+}
+
+.hii {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 2vmin;
 }
 
+.buttons {
+    display: flex;
+    gap: 2vmin;
+}
 
-
-
-
-
+.newgame, .resetscore {
+    height: 6vmin;
+    padding: 0 2.5vmin;
+    font-size: 3vmin;
+    background-color: #5A3A2A;
+    color: white;
+    border: none;
+    border-radius: 2vmin;
+    cursor: pointer;
+}
