@@ -9,21 +9,41 @@
 <body>
     <h1 class="heading">Tic Tac Toe</h1>
     <div class="container">
-    <div class="game">
-        <button class="box"></button>
-        <button class="box"></button>
-        <button class="box"></button>
-        <button class="box"></button>
-        <button class="box"></button>
-        <button class="box"></button>
-        <button class="box"></button>
-        <button class="box"></button>
-        <button class="box"></button>
-        <div class="hii"><button class="newgame">New Game</button>
-         <p id="message_cont" class="hide">Winner</p></div>
-        
-    
-    </div>
+
+        <!-- choose how you want to play -->
+        <div class="modes">
+            <button class="mode active" id="friend">2 Players</button>
+            <button class="mode" id="easy">vs Computer (Easy)</button>
+            <button class="mode" id="hard">vs Computer (Smart)</button>
+        </div>
+
+        <!-- scoreboard -->
+        <div class="scoreboard">
+            <p>O : <span id="oScore">0</span></p>
+            <p>Draw : <span id="drawScore">0</span></p>
+            <p>X : <span id="xScore">0</span></p>
+        </div>
+
+        <!-- the 9 boxes -->
+        <div class="game">
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+        </div>
+
+        <div class="hii">
+            <p id="message_cont">O's turn</p>
+            <div class="buttons">
+                <button class="newgame">New Game</button>
+                <button class="resetscore">Reset Score</button>
+            </div>
+        </div>
     </div>
     <script src="index.js"></script>
 </body>
